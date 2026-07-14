@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aalu Surprise ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- BACKGROUND EFFECTS -->
+
+<div id="backgroundHearts"></div>
+
+
+
+<!-- SCENE 1 : LOADING -->
+
+<section class="scene active" id="loadingScene">
+
+<div class="card">
+
+<h1>
+Preparing something special... 💕
+</h1>
+
+
+<div class="progress">
+
+<div id="progressBar"></div>
+
+</div>
+
+
+<p>
+Almost ready... 😊
+</p>
+
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- SCENE 2 : ENVELOPE -->
+
+<section class="scene" id="introScene">
+
+<div class="card">
+
+
+<h1>
+Hey Aalu! ❤️
+</h1>
+
+
+
+<div class="envelope" id="envelope">
+
+💌
+
+</div>
+
+
+<p>
+Tap the envelope
+</p>
+
+
+
+
+<div id="letter" class="hidden">
+
+
+<p id="typingText"></p>
+
+
+<button id="continueBtn">
+Continue 💖
+</button>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+<!-- SCENE 3 : QUESTION -->
+
+<section class="scene" id="questionScene">
+
+
+<div class="card">
+
+
+<h1>
+Wanna Hangout Tomorrow? 😊
+</h1>
+
+
+
+<div class="buttons">
+
+
+<button id="yesBtn">
+Yes 💖
+</button>
+
+
+
+<button id="noBtn">
+No 😢
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- SCENE 4 : CELEBRATION -->
+
+
+<section class="scene" id="celebrateScene">
+
+
+<div class="card">
+
+
+<h1>
+Yaaay!! 🥰💞
+</h1>
+
+
+<p>
+I knew you'd say yes ❤️
+</p>
+
+
+
+<div class="gallery">
+
+
+<img src="aalu1.png" class="galleryImage activeImage">
+
+
+<img src="aalu2.png" class="galleryImage">
+
+
+<img src="aalu3.png" class="galleryImage">
+
+
+<img src="aalu4.png" class="galleryImage">
+
+
+</div>
+
+
+
+<p id="photoCaption">
+The cutest Aalu 🥔❤️
+</p>
+
+
+<button id="messageBtn" onclick="openMessage()">
+Message for you 💌
+</button>
+
+
+<button id="replayBtn">
+Replay 🔄
+</button>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- COUNTDOWN POPUP -->
+
+
+<div id="floatingCountdown">
+
+<p class="timerText">
+Time Remaining Until we meet ❤️
+</p>
+
+<div class="timerClock">
+⏰ <span id="cornerTimer">00:00:00</span>
+</div>
+
+</div>
+
+
+
+<!-- SECRET MESSAGE POPUP -->
+
+
+<div class="popup" id="secretPopup">
+
+
+<div class="popupBox">
+
+
+<h2>
+💌
+</h2>
+
+
+<h3>
+One more thing...
+</h3>
+
+
+
+<p>
+
+I hope this made you smile ❤️
+
+<br><br>
+
+Making this for you made me smile too 🤭
+
+</p>
+
+
+<button onclick="closeMessage()">
+❤️
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- AUDIO -->
+
+
+<audio id="song" src="song.mp3"></audio>
+
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

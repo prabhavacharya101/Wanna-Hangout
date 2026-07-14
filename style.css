@@ -1,0 +1,633 @@
+*{
+    box-sizing:border-box;
+    font-family:"Poppins",Arial,sans-serif;
+}
+
+
+body{
+
+    margin:0;
+    height:100vh;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(135deg,#ff758c,#ff7eb3);
+
+}
+
+
+/* SCENES */
+
+.scene{
+
+    display:none;
+
+    width:100%;
+    height:100%;
+
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+.scene.active{
+
+    display:flex;
+
+    animation:fadeIn .8s ease;
+
+}
+
+
+
+@keyframes fadeIn{
+
+from{
+
+    opacity:0;
+    transform:scale(.9);
+
+}
+
+
+to{
+
+    opacity:1;
+    transform:scale(1);
+
+}
+
+}
+
+
+
+
+/* CARD */
+
+.card{
+
+    width:90%;
+    max-width:400px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.25);
+
+    animation:float 3s infinite ease-in-out;
+
+}
+
+
+
+@keyframes float{
+
+50%{
+
+    transform:translateY(-10px);
+
+}
+
+}
+
+
+
+
+
+h1{
+
+    color:#ff4d6d;
+
+    font-size:28px;
+
+}
+
+
+
+h2{
+
+    font-size:50px;
+
+}
+
+
+
+
+p{
+
+    color:#555;
+
+    font-size:18px;
+
+    line-height:1.6;
+
+}
+
+
+
+
+/* BUTTONS */
+
+
+button{
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:30px;
+
+    background:#ff4d6d;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    margin:10px;
+
+    transition:.3s;
+
+}
+
+
+button:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+
+
+
+
+
+/* LOADING */
+
+
+.progress{
+
+    height:12px;
+
+    background:#eee;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+
+
+#progressBar{
+
+    height:100%;
+
+    width:0;
+
+    background:#ff4d6d;
+
+    transition:3s;
+
+}
+
+
+
+
+
+
+
+/* ENVELOPE */
+
+
+.envelope{
+
+    font-size:90px;
+
+    cursor:pointer;
+
+    animation:bounce 1.5s infinite;
+
+}
+
+
+
+@keyframes bounce{
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+
+
+
+
+
+.hidden{
+
+    display:none;
+
+}
+
+
+
+
+
+/* QUESTION */
+
+
+.buttons{
+
+    height:100px;
+
+    position:relative;
+
+}
+
+
+.buttons button{
+
+    position:absolute;
+
+}
+
+
+
+#yesBtn{
+
+    left:15%;
+
+}
+
+
+
+#noBtn{
+
+    left:55%;
+
+    background:#eee;
+
+    color:#333;
+
+}
+
+
+
+
+
+
+/* GALLERY */
+
+
+.gallery{
+
+    width:100%;
+
+    height:250px;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+}
+
+
+
+.galleryImage{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:none;
+
+    border-radius:20px;
+
+    animation:imageFade 1s;
+
+}
+
+
+
+.galleryImage.activeImage{
+
+    display:block;
+
+}
+
+
+
+@keyframes imageFade{
+
+from{
+
+opacity:0;
+
+transform:scale(.9);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+
+
+
+
+
+
+/* POPUPS */
+
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(5px);
+
+}
+
+#replayBtn{
+
+background:#ff4d6d;
+
+margin-top:15px;
+
+}
+
+.popupBox{
+
+    background:white;
+
+    width:85%;
+
+    max-width:350px;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    animation:popup .5s;
+
+}
+
+#floatingCountdown{
+
+position:fixed;
+
+top:20px;
+
+right:20px;
+
+background:white;
+
+padding:12px 18px;
+
+border-radius:30px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+color:#ff4d6d;
+
+font-weight:bold;
+
+font-size:16px;
+
+display:none;
+
+z-index:1000;
+
+animation:floatTimer 2s infinite ease-in-out;
+
+}
+
+
+@keyframes floatTimer{
+
+50%{
+
+transform:translateY(-5px);
+
+}
+
+}
+
+@keyframes popup{
+
+from{
+
+transform:scale(.7);
+
+opacity:0;
+
+}
+
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+
+
+
+
+#countdown{
+
+    font-size:35px;
+
+    color:#ff4d6d;
+
+    font-weight:bold;
+
+}
+
+
+#closeSecret{
+
+position:relative;
+
+z-index:10;
+
+}
+
+
+/* FLOATING HEARTS */
+
+
+.bgHeart{
+
+    position:fixed;
+
+    bottom:-30px;
+
+    font-size:25px;
+
+    animation:heartFloat 8s linear forwards;
+
+    pointer-events:none;
+
+}
+
+.timerText{
+
+    margin:0 0 5px;
+
+    font-size:13px;
+
+    color:#ff4d6d;
+
+    font-weight:bold;
+
+}
+
+
+
+.timerClock{
+
+    font-size:18px;
+
+    color:#ff4d6d;
+
+    font-weight:bold;
+
+}
+
+@keyframes heartFloat{
+
+
+to{
+
+transform:
+
+translateY(-120vh)
+
+rotate(360deg);
+
+
+opacity:0;
+
+}
+
+
+}
+
+
+
+
+
+
+/* CONFETTI */
+
+
+.confetti{
+
+    position:fixed;
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+}
+
+
+
+
+/* SPARKLES */
+
+
+.sparkle{
+
+    position:fixed;
+
+    font-size:25px;
+
+    animation:sparkle 2s forwards;
+
+}
+
+
+
+@keyframes sparkle{
+
+to{
+
+transform:
+
+translateY(-100px)
+
+scale(0);
+
+opacity:0;
+
+}
+
+}
+
+
+
+
+
+
+@media(max-width:500px){
+
+.card{
+
+padding:25px;
+
+}
+
+h1{
+
+font-size:24px;
+
+}
+
+}
